@@ -1,0 +1,136 @@
+Cmp-Mod V01 Created by Cvpcb (2014-12-04 BZR 5312)-product   date = 28.4.2015. 21:13:30
+
+BeginCmp
+TimeStamp = /54C3B6EB;
+Reference = P1;
+ValeurCmp = LED_CONN;
+IdModule  = Connect:AK300-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C3CCAF;
+Reference = P2;
+ValeurCmp = LSW_U_CONN;
+IdModule  = Connect:AK300-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C3DA8E;
+Reference = P3;
+ValeurCmp = LSW_L_CONN;
+IdModule  = Connect:AK300-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C3E0AC;
+Reference = P4;
+ValeurCmp = MDO_CONN;
+IdModule  = Connect:AK300-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /54C3E6EB;
+Reference = P5;
+ValeurCmp = MDC_CONN;
+IdModule  = Connect:AK300-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5505814A;
+Reference = P6;
+ValeurCmp = AR_HE_HC05;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /55058675;
+Reference = P7;
+ValeurCmp = AR_HE_CURR;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /5505A7D7;
+Reference = P8;
+ValeurCmp = PS_RELAY_CONN;
+IdModule  = Connect:AK300-4;
+EndCmp
+
+BeginCmp
+TimeStamp = /5505CE44;
+Reference = P9;
+ValeurCmp = H_BRIDGE_CONN;
+IdModule  = DAC:CONN_6;
+EndCmp
+
+BeginCmp
+TimeStamp = /550D28E4;
+Reference = P10;
+ValeurCmp = SENS_2_CONN;
+IdModule  = Connect:AK300-4;
+EndCmp
+
+BeginCmp
+TimeStamp = /550D39EB;
+Reference = P11;
+ValeurCmp = SENS_3_CONN;
+IdModule  = Connect:AK300-4;
+EndCmp
+
+BeginCmp
+TimeStamp = /551FB5ED;
+Reference = P12;
+ValeurCmp = LIGHT_CONN;
+IdModule  = Connect:AK300-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /551FBCDB;
+Reference = P13;
+ValeurCmp = AUX_CONN;
+IdModule  = Connect:AK300-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /547A1702;
+Reference = R1;
+ValeurCmp = 10K;
+IdModule  = Discret:R3-LARGE_PADS;
+EndCmp
+
+BeginCmp
+TimeStamp = /547A1784;
+Reference = R2;
+ValeurCmp = 10K;
+IdModule  = Discret:R3-LARGE_PADS;
+EndCmp
+
+BeginCmp
+TimeStamp = /547A17B7;
+Reference = R3;
+ValeurCmp = 10K;
+IdModule  = Discret:R3-LARGE_PADS;
+EndCmp
+
+BeginCmp
+TimeStamp = /547A17D2;
+Reference = R4;
+ValeurCmp = 10K;
+IdModule  = Discret:R3-LARGE_PADS;
+EndCmp
+
+BeginCmp
+TimeStamp = /54B309D8;
+Reference = R5;
+ValeurCmp = 1K;
+IdModule  = Discret:R3-LARGE_PADS;
+EndCmp
+
+BeginCmp
+TimeStamp = /547B4B27;
+Reference = UNO1;
+ValeurCmp = Arduino_UNO;
+IdModule  = DAC:ARDUINO_UNO_SHIELD;
+EndCmp
+
+EndListe

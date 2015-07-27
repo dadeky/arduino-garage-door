@@ -1,0 +1,3 @@
+Arduino Uno
+Double BTS7960B DC 43A Stepper Motor Driver H-Bridge PWM For Arduino
+HC-05 bluetooth adapter
