@@ -53,8 +53,8 @@ boolean idle = true;							// the MCU is currently idle
 unsigned long idleMilis = 0;					// will store last time the MCU became idle
 boolean cmdComplete = false;					// is command from serial port complete
 String cmd;										// command that comes from the serial port
-int upLimitVal;
-int manStopVal;
+int upLimitVal = LOW;
+int manStopVal = LOW;
 
 // Instantiate a Bounce object
 Bounce debouncerUpLimit = Bounce();
