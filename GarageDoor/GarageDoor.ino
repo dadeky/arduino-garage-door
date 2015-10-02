@@ -1,6 +1,6 @@
-
 #include "GarageDoor.h"
 #include "WString.cpp"
+#include "Bounce2.h"
 
 //pins
 const int ledPin = 13;					//When there is an activity the led blinks
@@ -53,6 +53,12 @@ boolean idle = true;							// the MCU is currently idle
 unsigned long idleMilis = 0;					// will store last time the MCU became idle
 boolean cmdComplete = false;					// is command from serial port complete
 String cmd;										// command that comes from the serial port
+int upLimitVal;
+int manStopVal;
+
+// Instantiate a Bounce object
+Bounce debouncerUpLimit = Bounce();
+Bounce debouncerManStop = Bounce();
 
 void slowStart(int direction)
 {
@@ -136,9 +142,11 @@ void closeDoor()
 	}
 
 	do{
-		delay(10);
+		//delay(10);
 		current = analogRead(currentSensorPin);
-		if(current > maxCurrentDown || digitalRead(manualStopPin) == HIGH){stopDoor();}
+		debouncerManStop.update();
+		manStopVal = debouncerManStop.read();
+		if(current > maxCurrentDown || manStopVal == HIGH){stopDoor();}
 		printSensorValue("current",current);
 		getSerialMessage();
 		blinkLed();
@@ -153,6 +161,7 @@ void closeDoor()
 	}
 	setIdle();
 }
+
 //opens the door
 void openDoor()
 {
@@ -160,6 +169,7 @@ void openDoor()
 		startPSs();
 		delay(waitForPsInterval);
 	}
+
 	upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
 	if(upperLimitSwitchState == LOW){
 		slowStart(OPENING_DIRECTION);
@@ -171,16 +181,20 @@ void openDoor()
 	}
 
 	do{
-		delay(10);
+		//delay(10);
 		current = analogRead(currentSensorPin);
 		current = 1023 - current;
-		if(current > maxCurrentUp || digitalRead(manualStopPin) == HIGH){stopDoor();}
+		debouncerManStop.update();
+		manStopVal = debouncerManStop.read();
+		if(current > maxCurrentUp || manStopVal == HIGH){stopDoor();}
 		printSensorValue("current",current);
 		getSerialMessage();
 		blinkLed();
 		if(stopped==1)break;
-		upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
-	}while(upperLimitSwitchState == LOW);
+		//upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
+		debouncerUpLimit.update();
+		upLimitVal = debouncerUpLimit.read();
+	}while(upLimitVal == LOW);
 
 	if(stopped == 0){
 		stopDoor();
@@ -324,12 +338,16 @@ void setup()
 {
 	//pinMode(lowerLimitSwitchPin, INPUT);
 	pinMode(upperLimitSwitchPin, INPUT);
+	debouncerUpLimit.attach(upperLimitSwitchPin);	// After setting up the button, setup the Bounce instance
+	debouncerUpLimit.interval(5); // interval in ms
 	pinMode(ledPin, OUTPUT);
 	pinMode(motorDirIn1Pin, OUTPUT);
 	pinMode(motorDirIn2Pin, OUTPUT);
 	pinMode(manualOpenPin, INPUT);
 	pinMode(manualClosePin, INPUT);
 	pinMode(manualStopPin, INPUT);
+	debouncerManStop.attach(manualStopPin);
+	debouncerManStop.interval(5);
 	pinMode(psRelayPin1, OUTPUT);
 	pinMode(psRelayPin2, OUTPUT);
 	digitalWrite(psRelayPin1,LOW);
