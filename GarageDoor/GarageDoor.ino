@@ -7,11 +7,11 @@ const int ledPin = 13;					//When there is an activity the led blinks
 const int motorDirIn1Pin = 7; 			//direction
 const int motorDirIn2Pin = 6; 			//direction
 const int motorPwmPin = 5;				//motor PWM
-const int upperLimitSwitchPin = 12; 	//Upper switch pin that stops the door
-//const int lowerLimitSwitchPin = 8; 		//Lower switch pin that stops the door
+const int upperLimitSwitchPin = 11; 	//Upper switch pin that stops the door
+//const int lowerLimitSwitchPin = 8; 	//Lower switch pin that stops the door
 const int manualOpenPin = 9;			//Besides the bluetooth control the door can be operated with manual switch  -open button
 const int manualClosePin = 10;			//Besides the bluetooth control the door can be operated with manual switch - close button
-const int manualStopPin = 8;			//Besides the bluetooth control the door can be operated with manual switch - stop button
+const int manualStopPin = 3;			//Besides the bluetooth control the door can be operated with manual switch - stop button
 const int psRelayPin1 = 4;				//the relay that starts power supply #1
 const int psRelayPin2 = 2;				//the relay that starts power supply #2
 const int currentSensorPin = A0;		//analog input pin for current sensor
@@ -29,11 +29,11 @@ const int CLOSING_DIRECTION = 0;
 int speedDown = 255;							//motor speed closing 0..255
 int speedUp = 255;								//motor speed opening 0..255
 int blinkInterval = 300;						//LED indicator blink interval
-int sensorSendInterval = 100;					//how often we send sensor values
+int sensorSendInterval = 50;					//how often we send sensor values
 unsigned long inactiveInterval = 3000;			//when this interval is reached the power supplies go off
 int waitForPsInterval = 500;					//how many miliseconds to wait before the Power supply wakes up
 int maxCurrentUp = 900;							//if the current is larger than this than the door stops
-int maxCurrentDown = 800;						//if the current is larger than this than the door stops
+int maxCurrentDown = 600;						//if the current is larger than this than the door stops
 int slowStartDuration = 1000;					//the duration of the slow start in miliseconds
 int slowStartNumOfSteps = 20;					//number of steps to reach the full speed
 
@@ -53,8 +53,8 @@ boolean idle = true;							// the MCU is currently idle
 unsigned long idleMilis = 0;					// will store last time the MCU became idle
 boolean cmdComplete = false;					// is command from serial port complete
 String cmd;										// command that comes from the serial port
-int upLimitVal = LOW;
-int manStopVal = LOW;
+int upLimitVal = LOW;							// holds the value of upper limit switch
+int manStopVal = LOW;							// holds the value of manual stop switch
 
 // Instantiate a Bounce object
 Bounce debouncerUpLimit = Bounce();
@@ -146,7 +146,7 @@ void closeDoor()
 		current = analogRead(currentSensorPin);
 		debouncerManStop.update();
 		manStopVal = debouncerManStop.read();
-		if(current > maxCurrentDown || manStopVal == HIGH){stopDoor();}
+		if(current > maxCurrentDown || manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of a pull-up
 		printSensorValue("current",current);
 		getSerialMessage();
 		blinkLed();
@@ -171,7 +171,7 @@ void openDoor()
 	}
 
 	upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
-	if(upperLimitSwitchState == LOW){
+	if(upperLimitSwitchState == HIGH){ //internal pull-up is enabled
 		slowStart(OPENING_DIRECTION);
 		analogWrite(motorPwmPin,speedUp);
 		digitalWrite(motorDirIn1Pin,HIGH);
@@ -186,15 +186,14 @@ void openDoor()
 		current = 1023 - current;
 		debouncerManStop.update();
 		manStopVal = debouncerManStop.read();
-		if(current > maxCurrentUp || manStopVal == HIGH){stopDoor();}
+		if(current > maxCurrentUp || manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of an internal pull-up
 		printSensorValue("current",current);
 		getSerialMessage();
 		blinkLed();
 		if(stopped==1)break;
-		//upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
 		debouncerUpLimit.update();
 		upLimitVal = debouncerUpLimit.read();
-	}while(upLimitVal == LOW);
+	}while(upLimitVal == HIGH); //internal pull-up is enabled that's why HIGH instead of LOW
 
 	if(stopped == 0){
 		stopDoor();
@@ -337,7 +336,7 @@ void checkIdle()
 void setup()
 {
 	//pinMode(lowerLimitSwitchPin, INPUT);
-	pinMode(upperLimitSwitchPin, INPUT);
+	pinMode(upperLimitSwitchPin, INPUT_PULLUP);
 	debouncerUpLimit.attach(upperLimitSwitchPin);	// After setting up the button, setup the Bounce instance
 	debouncerUpLimit.interval(5); // interval in ms
 	pinMode(ledPin, OUTPUT);
@@ -345,7 +344,7 @@ void setup()
 	pinMode(motorDirIn2Pin, OUTPUT);
 	pinMode(manualOpenPin, INPUT);
 	pinMode(manualClosePin, INPUT);
-	pinMode(manualStopPin, INPUT);
+	pinMode(manualStopPin, INPUT_PULLUP);	//Internal PULL-UP enabled
 	debouncerManStop.attach(manualStopPin);
 	debouncerManStop.interval(5);
 	pinMode(psRelayPin1, OUTPUT);
