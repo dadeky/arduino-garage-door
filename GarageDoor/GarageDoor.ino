@@ -7,7 +7,7 @@ const int ledPin = 13;					//When there is an activity the led blinks
 const int motorDirIn1Pin = 7; 			//direction
 const int motorDirIn2Pin = 6; 			//direction
 const int motorPwmPin = 5;				//motor PWM
-const int upperLimitSwitchPin = 11; 	//Upper switch pin that stops the door
+const int upperLimitSwitchPin = 12; 	//Upper switch pin that stops the door
 //const int lowerLimitSwitchPin = 8; 	//Lower switch pin that stops the door
 const int manualOpenPin = 9;			//Besides the bluetooth control the door can be operated with manual switch  -open button
 const int manualClosePin = 10;			//Besides the bluetooth control the door can be operated with manual switch - close button
@@ -53,12 +53,11 @@ boolean idle = true;							// the MCU is currently idle
 unsigned long idleMilis = 0;					// will store last time the MCU became idle
 boolean cmdComplete = false;					// is command from serial port complete
 String cmd;										// command that comes from the serial port
-int upLimitVal = LOW;							// holds the value of upper limit switch
-int manStopVal = LOW;							// holds the value of manual stop switch
+int manStopVal;							// holds the value of manual stop switch
 
 // Instantiate a Bounce object
 Bounce debouncerUpLimit = Bounce();
-Bounce debouncerManStop = Bounce();
+//Bounce debouncerManStop = Bounce();
 
 void slowStart(int direction)
 {
@@ -142,10 +141,11 @@ void closeDoor()
 	}
 
 	do{
-		//delay(10);
+		delay(10);
 		current = analogRead(currentSensorPin);
-		debouncerManStop.update();
-		manStopVal = debouncerManStop.read();
+		//debouncerManStop.update();
+		//manStopVal = debouncerManStop.read();
+		manStopVal = digitalRead(manualStopPin);
 		if(current > maxCurrentDown || manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of a pull-up
 		printSensorValue("current",current);
 		getSerialMessage();
@@ -170,8 +170,10 @@ void openDoor()
 		delay(waitForPsInterval);
 	}
 
-	upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
-	if(upperLimitSwitchState == HIGH){ //internal pull-up is enabled
+	debouncerUpLimit.update();
+	upperLimitSwitchState = debouncerUpLimit.read();
+	//upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
+	if(upperLimitSwitchState == LOW){ //internal pull-up is enabled
 		slowStart(OPENING_DIRECTION);
 		analogWrite(motorPwmPin,speedUp);
 		digitalWrite(motorDirIn1Pin,HIGH);
@@ -184,16 +186,18 @@ void openDoor()
 		//delay(10);
 		current = analogRead(currentSensorPin);
 		current = 1023 - current;
-		debouncerManStop.update();
-		manStopVal = debouncerManStop.read();
-		if(current > maxCurrentUp || manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of an internal pull-up
+		//debouncerManStop.update();
+		//manStopVal = debouncerManStop.read();
+		manStopVal = digitalRead(manualStopPin);
+		if(/*current > maxCurrentUp || */manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of an internal pull-up
 		printSensorValue("current",current);
 		getSerialMessage();
 		blinkLed();
 		if(stopped==1)break;
 		debouncerUpLimit.update();
-		upLimitVal = debouncerUpLimit.read();
-	}while(upLimitVal == HIGH); //internal pull-up is enabled that's why HIGH instead of LOW
+		upperLimitSwitchState = debouncerUpLimit.read();
+		//upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
+	}while(upperLimitSwitchState == LOW); //internal pull-up is enabled that's why HIGH instead of LOW
 
 	if(stopped == 0){
 		stopDoor();
@@ -336,17 +340,17 @@ void checkIdle()
 void setup()
 {
 	//pinMode(lowerLimitSwitchPin, INPUT);
-	pinMode(upperLimitSwitchPin, INPUT_PULLUP);
+	pinMode(upperLimitSwitchPin, INPUT);
 	debouncerUpLimit.attach(upperLimitSwitchPin);	// After setting up the button, setup the Bounce instance
-	debouncerUpLimit.interval(5); // interval in ms
+	debouncerUpLimit.interval(10); // interval in ms
 	pinMode(ledPin, OUTPUT);
 	pinMode(motorDirIn1Pin, OUTPUT);
 	pinMode(motorDirIn2Pin, OUTPUT);
 	pinMode(manualOpenPin, INPUT);
 	pinMode(manualClosePin, INPUT);
 	pinMode(manualStopPin, INPUT_PULLUP);	//Internal PULL-UP enabled
-	debouncerManStop.attach(manualStopPin);
-	debouncerManStop.interval(5);
+	//debouncerManStop.attach(manualStopPin);
+	//debouncerManStop.interval(5);
 	pinMode(psRelayPin1, OUTPUT);
 	pinMode(psRelayPin2, OUTPUT);
 	digitalWrite(psRelayPin1,LOW);
