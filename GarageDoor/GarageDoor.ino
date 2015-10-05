@@ -170,11 +170,9 @@ void openDoor()
 		delay(waitForPsInterval);
 	}
 
-	debouncerUpLimit.update();
-	upperLimitSwitchState = debouncerUpLimit.read();
-	//upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
-	if(upperLimitSwitchState == LOW){ //internal pull-up is enabled
-		slowStart(OPENING_DIRECTION);
+	upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
+	if(upperLimitSwitchState == LOW){
+		//slowStart(OPENING_DIRECTION);
 		analogWrite(motorPwmPin,speedUp);
 		digitalWrite(motorDirIn1Pin,HIGH);
 		digitalWrite(motorDirIn2Pin,LOW);
@@ -197,7 +195,7 @@ void openDoor()
 		debouncerUpLimit.update();
 		upperLimitSwitchState = debouncerUpLimit.read();
 		//upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
-	}while(upperLimitSwitchState == LOW); //internal pull-up is enabled that's why HIGH instead of LOW
+	}while(upperLimitSwitchState == LOW);
 
 	if(stopped == 0){
 		stopDoor();
