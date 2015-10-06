@@ -170,15 +170,15 @@ void openDoor()
 		delay(waitForPsInterval);
 	}
 
-	upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
-	if(upperLimitSwitchState == LOW){
+	//upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
+	//if(upperLimitSwitchState == LOW){
 		//slowStart(OPENING_DIRECTION);
 		analogWrite(motorPwmPin,speedUp);
 		digitalWrite(motorDirIn1Pin,HIGH);
 		digitalWrite(motorDirIn2Pin,LOW);
 		doorStateIndicator = DOOR_IN_BETWEEN;
 		stopped = 0;
-	}
+	//}
 
 	do{
 		//delay(10);
@@ -187,7 +187,7 @@ void openDoor()
 		//debouncerManStop.update();
 		//manStopVal = debouncerManStop.read();
 		manStopVal = digitalRead(manualStopPin);
-		if(/*current > maxCurrentUp || */manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of an internal pull-up
+		if(current > maxCurrentUp || manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of an internal pull-up
 		printSensorValue("current",current);
 		getSerialMessage();
 		blinkLed();
