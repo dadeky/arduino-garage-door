@@ -170,8 +170,9 @@ void openDoor()
 		delay(waitForPsInterval);
 	}
 
-	upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
-	if(upperLimitSwitchState == LOW){
+	//upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
+	//if(upperLimitSwitchState == LOW){
+	if(doorStateIndicator < DOOR_OPEN){
 		//slowStart(OPENING_DIRECTION);
 		analogWrite(motorPwmPin,speedUp);
 		digitalWrite(motorDirIn1Pin,HIGH);
