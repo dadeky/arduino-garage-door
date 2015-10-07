@@ -170,15 +170,15 @@ void openDoor()
 		delay(waitForPsInterval);
 	}
 
-	//upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
-	//if(upperLimitSwitchState == LOW){
+	upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
+	if(upperLimitSwitchState == LOW){
 		//slowStart(OPENING_DIRECTION);
 		analogWrite(motorPwmPin,speedUp);
 		digitalWrite(motorDirIn1Pin,HIGH);
 		digitalWrite(motorDirIn2Pin,LOW);
 		doorStateIndicator = DOOR_IN_BETWEEN;
 		stopped = 0;
-	//}
+	}
 
 	do{
 		//delay(10);
