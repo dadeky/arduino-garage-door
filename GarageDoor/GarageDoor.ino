@@ -38,9 +38,9 @@ int slowStartDuration = 1000;					//the duration of the slow start in milisecond
 int slowStartNumOfSteps = 20;					//number of steps to reach the full speed
 
 //runtime vars
-int doorStateIndicator = DOOR_CLOSED; 			//Indicates if the door is open or not - closed 0, open 2, in between 1
+volatile int doorStateIndicator = DOOR_CLOSED; 			//Indicates if the door is open or not - closed 0, open 2, in between 1
 int lowerLimitSwitchState;						//pulldown resistor needs to be applied
-int upperLimitSwitchState;						//pulldown resistor needs to be applied
+volatile int upperLimitSwitchState;				//pulldown resistor needs to be applied
 int manualOpenState;							//pulldown resistor needs to be applied
 int manualCloseState;							//pulldown resistor needs to be applied
 int powSupplyRelaysState = POWER_SUPPLY_OFF; 	//initial state is off, arduino will be powered with 5V phone charger, and the power supply will kick in when needed
@@ -170,10 +170,10 @@ void openDoor()
 		delay(waitForPsInterval);
 	}
 
-	//upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
-	//if(upperLimitSwitchState == LOW){
-	if(doorStateIndicator < DOOR_OPEN){
-		//slowStart(OPENING_DIRECTION);
+	upperLimitSwitchState = digitalRead(upperLimitSwitchPin);
+	if(upperLimitSwitchState == LOW){
+	//if(doorStateIndicator < DOOR_OPEN){
+		slowStart(OPENING_DIRECTION);
 		analogWrite(motorPwmPin,speedUp);
 		digitalWrite(motorDirIn1Pin,HIGH);
 		digitalWrite(motorDirIn2Pin,LOW);
