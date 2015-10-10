@@ -176,7 +176,7 @@ void openDoor()
 		current = analogRead(currentSensorPin);
 		current = 1023 - current;
 		manStopVal = digitalRead(manualStopPin);
-		if(current > maxCurrentUp || manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of an internal pull-up
+		if(/*current > maxCurrentUp || */manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of an internal pull-up
 		printSensorValue("current",current);
 		getSerialMessage();
 		blinkLed();
