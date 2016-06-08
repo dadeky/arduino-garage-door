@@ -22,6 +22,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GarageDoor/arduino/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GarageDoor/arduino/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GarageDoor/Libraries/Bounce2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GarageDoor/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GarageDoor/core/variant}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.2115476671" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
 							</tool>
@@ -30,6 +32,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GarageDoor/arduino/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GarageDoor/arduino/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GarageDoor/Libraries/Bounce2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GarageDoor/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GarageDoor/core/variant}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.1740063534" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
 							</tool>
@@ -38,6 +42,7 @@
 							<tool id="it.baeyens.arduino.tool.objcopy.eep.1434252224" name="Arduino tool Create eeprom" superClass="it.baeyens.arduino.tool.objcopy.eep"/>
 							<tool id="it.baeyens.arduino.tool.objcopy.flash.438634354" name="Arduino tool Create hex" superClass="it.baeyens.arduino.tool.objcopy.flash"/>
 							<tool id="it.baeyens.arduino.tool.size.2092694927" name="Arduino tool Print Size" superClass="it.baeyens.arduino.tool.size"/>
+							<tool id="it.baeyens.arduino.tool.sketch.compiler.s.1378433413" name="Arduino Assembler" superClass="it.baeyens.arduino.tool.sketch.compiler.s"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
@@ -49,7 +54,7 @@
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="GarageDoor.null.1223594307" name="GarageDoor"/>
+		<project id="GarageDoor.null.2060173762" name="GarageDoor"/>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>

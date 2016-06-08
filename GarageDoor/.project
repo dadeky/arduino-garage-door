@@ -29,7 +29,7 @@
 		<link>
 			<name>Libraries/Bounce2</name>
 			<type>2</type>
-			<locationURI>ArduinoPivateLibPath/Bounce2</locationURI>
+			<locationURI>ArduinoPrivateLibPath/Bounce2</locationURI>
 		</link>
 		<link>
 			<name>arduino/core</name>
@@ -41,11 +41,21 @@
 			<type>2</type>
 			<locationURI>ArduinoPinPath/standard</locationURI>
 		</link>
+		<link>
+			<name>core/core</name>
+			<type>2</type>
+			<location>D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino</location>
+		</link>
+		<link>
+			<name>core/variant</name>
+			<type>2</type>
+			<location>D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/variants/standard</location>
+		</link>
 	</linkedResources>
 	<variableList>
 		<variable>
 			<name>ArduinoHardwareLibPath</name>
-			<value>libraries</value>
+			<value>file:/D:/Arduino/hardware/arduino/avr/libraries</value>
 		</variable>
 		<variable>
 			<name>ArduinoPinPath</name>
@@ -53,7 +63,7 @@
 		</variable>
 		<variable>
 			<name>ArduinoPlatformPath</name>
-			<value></value>
+			<value>file:/D:/Arduino/hardware/arduino/avr/cores</value>
 		</variable>
 	</variableList>
 </projectDescription>

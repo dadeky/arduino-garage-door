@@ -1,5 +1,5 @@
-#include "GarageDoor.h"
-#include "WString.cpp"
+#include "Arduino.h"
+#include "WString.h"
 
 //pins
 const int ledPin = 13;					//When there is an activity the led blinks
