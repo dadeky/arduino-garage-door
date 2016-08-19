@@ -33,7 +33,7 @@ unsigned long inactiveInterval = 3000;			//when this interval is reached the pow
 int waitForPsInterval = 100;					//how many miliseconds to wait before the Power supply wakes up
 int maxCurrentUp = 900;							//if the current is larger than this than the door stops
 int maxCurrentDown = 600;						//if the current is larger than this than the door stops
-int slowStartDuration = 1000;					//the duration of the slow start in miliseconds
+int slowStartDuration = 500;					//the duration of the slow start in miliseconds
 int slowStartNumOfSteps = 20;					//number of steps to reach the full speed
 
 //runtime vars
