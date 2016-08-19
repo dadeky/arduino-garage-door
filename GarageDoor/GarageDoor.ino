@@ -7,7 +7,7 @@ const int motorDirIn1Pin = 7; 			//direction
 const int motorDirIn2Pin = 6; 			//direction
 const int motorPwmPin = 5;				//motor PWM
 const int upperLimitSwitchPin = 12; 	//Upper switch pin that stops the door
-//const int lowerLimitSwitchPin = 8; 	//Lower switch pin that stops the door
+const int lowerLimitSwitchPin = 8; 		//Lower switch pin that stops the door
 const int manualOpenPin = 9;			//Besides the bluetooth control the door can be operated with manual switch  -open button
 const int manualClosePin = 10;			//Besides the bluetooth control the door can be operated with manual switch - close button
 const int manualStopPin = 3;			//Besides the bluetooth control the door can be operated with manual switch - stop button
@@ -124,7 +124,7 @@ void closeDoor()
 		startPSs();
 		delay(waitForPsInterval);
 	}
-	//lowerLimitSwitchState = digitalRead(lowerLimitSwitchPin);
+	lowerLimitSwitchState = digitalRead(lowerLimitSwitchPin);
 	if(lowerLimitSwitchState == LOW){
 		slowStart(CLOSING_DIRECTION);
 		analogWrite(motorPwmPin,speedDown);
@@ -143,7 +143,7 @@ void closeDoor()
 		getSerialMessage();
 		blinkLed();
 		if(stopped==1)break;
-		//lowerLimitSwitchState = digitalRead(lowerLimitSwitchPin);
+		lowerLimitSwitchState = digitalRead(lowerLimitSwitchPin);
 	}while(lowerLimitSwitchState == LOW);
 
 	if(stopped == 0){
@@ -323,7 +323,7 @@ void checkIdle()
 //The setup function is called once at startup of the sketch
 void setup()
 {
-	//pinMode(lowerLimitSwitchPin, INPUT);
+	pinMode(lowerLimitSwitchPin, INPUT);
 	pinMode(upperLimitSwitchPin, INPUT);
 	pinMode(ledPin, OUTPUT);
 	pinMode(motorDirIn1Pin, OUTPUT);
