@@ -135,7 +135,7 @@ void closeDoor()
 	}
 
 	do{
-		delay(10);
+		delay(30);
 		current = analogRead(currentSensorPin);
 		manStopVal = digitalRead(manualStopPin);
 		if(current > maxCurrentDown || manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of a pull-up
@@ -172,7 +172,7 @@ void openDoor()
 	}
 
 	do{
-		delay(50);
+		delay(30);
 		current = analogRead(currentSensorPin);
 		current = 1023 - current;
 		manStopVal = digitalRead(manualStopPin);
