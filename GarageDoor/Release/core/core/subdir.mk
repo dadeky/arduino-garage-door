@@ -97,154 +97,154 @@ CPP_DEPS += \
 core/CDC.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/CDC.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/HardwareSerial.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/HardwareSerial.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/HardwareSerial0.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/HardwareSerial0.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/HardwareSerial1.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/HardwareSerial1.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/HardwareSerial2.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/HardwareSerial2.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/HardwareSerial3.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/HardwareSerial3.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/IPAddress.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/IPAddress.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/PluggableUSB.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/PluggableUSB.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/Print.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/Print.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/Stream.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/Stream.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/Tone.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/Tone.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/USBCore.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/USBCore.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/WInterrupts.c.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/WInterrupts.c
 	@echo 'Building file: $<'
 	@echo 'Starting C compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/WMath.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/WMath.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/WString.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/WString.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/abi.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/abi.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/hooks.c.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/hooks.c
 	@echo 'Building file: $<'
 	@echo 'Starting C compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/main.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/main.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/new.cpp.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/new.cpp
 	@echo 'Building file: $<'
 	@echo 'Starting C++ compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 -x c++ "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/wiring.c.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/wiring.c
 	@echo 'Building file: $<'
 	@echo 'Starting C compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/wiring_analog.c.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/wiring_analog.c
 	@echo 'Building file: $<'
 	@echo 'Starting C compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/wiring_digital.c.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/wiring_digital.c
 	@echo 'Building file: $<'
 	@echo 'Starting C compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
@@ -258,14 +258,14 @@ core/wiring_pulse.S.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/a
 core/wiring_pulse.c.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/wiring_pulse.c
 	@echo 'Building file: $<'
 	@echo 'Starting C compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 
 core/wiring_shift.c.o: D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/wiring_shift.c
 	@echo 'Building file: $<'
 	@echo 'Starting C compile'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Arduino\hardware\arduino\avr\cores\arduino" -I"D:\Arduino\hardware\arduino\avr\variants\standard" -I"D:\ArduinoPrivate\libraries\Bounce2" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\cores\arduino" -I"D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -D__IN_ECLIPSE__=1 "$<"  -o  "$@"   -w
 	@echo 'Finished building: $<'
 	@echo ' '
 

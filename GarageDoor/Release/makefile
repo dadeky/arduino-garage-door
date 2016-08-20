@@ -10,8 +10,6 @@ RM := rm -f
 -include sources.mk
 -include subdir.mk
 -include core/core/subdir.mk
--include arduino/core/subdir.mk
--include Libraries/Bounce2/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)

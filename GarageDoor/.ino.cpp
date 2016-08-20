@@ -2,8 +2,9 @@
 //This is a automatic generated file
 //Please do not modify this file
 //If you touch this file your change will be overwritten during the next build
-//This file has been generated on 2016-06-08 10:35:44
+//This file has been generated on 2016-08-20 13:35:04
 
+#include "Arduino.h"
 #include "Arduino.h"
 #include "WString.h"
 void slowStart(int direction) ;

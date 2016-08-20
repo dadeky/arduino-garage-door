@@ -9,7 +9,7 @@ core/CDC.cpp.o: \
  D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/Stream.h \
  D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/Print.h \
  D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/Printable.h \
- D:\Arduino\hardware\arduino\avr\variants\standard/pins_arduino.h
+ D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard/pins_arduino.h
 
 D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/USBAPI.h:
 
@@ -29,4 +29,4 @@ D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino
 
 D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino/Printable.h:
 
-D:\Arduino\hardware\arduino\avr\variants\standard/pins_arduino.h:
+D:\eclipse_mars\arduinoPlugin\packages\arduino\hardware\avr\1.6.11\variants\standard/pins_arduino.h:

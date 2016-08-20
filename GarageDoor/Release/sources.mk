@@ -38,7 +38,5 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
-Libraries/Bounce2 \
-arduino/core \
 core/core \
 
