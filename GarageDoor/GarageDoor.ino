@@ -51,7 +51,7 @@ boolean idle = true;							// the MCU is currently idle
 unsigned long idleMilis = 0;					// will store last time the MCU became idle
 boolean cmdComplete = false;					// is command from serial port complete
 String cmd;										// command that comes from the serial port
-int manStopVal;							// holds the value of manual stop switch
+volatile int manStopVal;						// holds the value of manual stop switch
 
 void slowStart(int direction)
 {
@@ -134,17 +134,18 @@ void closeDoor()
 		stopped = 0;
 	}
 
-	do{
+	while(lowerLimitSwitchState == LOW){
 		delay(30);
 		current = analogRead(currentSensorPin);
 		manStopVal = digitalRead(manualStopPin);
-		if(current > maxCurrentDown || manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of a pull-up
+		if(current > maxCurrentDown){stopDoor();}
+		if(manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of a pull-up
 		printSensorValue("current",current);
 		getSerialMessage();
 		blinkLed();
 		if(stopped==1)break;
 		lowerLimitSwitchState = digitalRead(lowerLimitSwitchPin);
-	}while(lowerLimitSwitchState == LOW);
+	}
 
 	if(stopped == 0){
 		stopDoor();
@@ -171,17 +172,18 @@ void openDoor()
 		stopped = 0;
 	}
 
-	do{
+	while(digitalRead(upperLimitSwitchPin) == LOW){
 		delay(30);
 		current = analogRead(currentSensorPin);
 		current = 1023 - current;
 		manStopVal = digitalRead(manualStopPin);
-		if(current > maxCurrentUp || manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of an internal pull-up
+		if(current > maxCurrentUp){stopDoor();}
+		if(manStopVal == LOW){stopDoor();} //manStopVal is LOW when pressed because of an internal pull-up
 		printSensorValue("current",current);
 		getSerialMessage();
 		blinkLed();
 		if(stopped==1)break;
-	}while(digitalRead(upperLimitSwitchPin) == LOW);
+	}
 
 	if(stopped == 0){
 		stopDoor();
