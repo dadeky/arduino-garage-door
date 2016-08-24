@@ -51,7 +51,7 @@ boolean idle = true;							// the MCU is currently idle
 unsigned long idleMilis = 0;					// will store last time the MCU became idle
 boolean cmdComplete = false;					// is command from serial port complete
 String cmd;										// command that comes from the serial port
-volatile int manStopVal;						// holds the value of manual stop switch
+volatile int manStopVal = 0;						// holds the value of manual stop switch
 
 void slowStart(int direction)
 {
@@ -64,6 +64,7 @@ void slowStart(int direction)
 		digitalWrite(motorDirIn1Pin,HIGH);
 		digitalWrite(motorDirIn2Pin,LOW);
 		do{
+			blinkLed();
 			analogWrite(motorPwmPin,speed);
 			speed += speedIncrement;
 			delay(delayInterval);
@@ -75,6 +76,7 @@ void slowStart(int direction)
 		digitalWrite(motorDirIn1Pin,LOW);
 		digitalWrite(motorDirIn2Pin,HIGH);
 		do{
+			blinkLed();
 			analogWrite(motorPwmPin,speed);
 			speed += speedIncrement;
 			delay(delayInterval);
@@ -135,7 +137,7 @@ void closeDoor()
 	}
 
 	while(lowerLimitSwitchState == LOW){
-		delay(30);
+		delay(50);
 		current = analogRead(currentSensorPin);
 		manStopVal = digitalRead(manualStopPin);
 		if(current > maxCurrentDown){stopDoor();}
@@ -173,7 +175,7 @@ void openDoor()
 	}
 
 	while(digitalRead(upperLimitSwitchPin) == LOW){
-		delay(30);
+		delay(50);
 		current = analogRead(currentSensorPin);
 		current = 1023 - current;
 		manStopVal = digitalRead(manualStopPin);
