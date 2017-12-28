@@ -2,14 +2,14 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
--include ../makefile.init
+-include ..\makefile.init
 
 RM := del 
 
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir.mk
--include core\core/subdir.mk
+-include core\core\subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -45,11 +45,11 @@ ifneq ($(strip $(C_DEPS)),)
 endif
 endif
 
--include ../makefile.defs
+-include ..\makefile.defs
 
 # Add inputs and outputs from these tool invocations to the build variables 
 AR += \
-arduino.ar \
+D:\git\arduino-garage-door\GarageDoor\Release\arduino.ar \
 
 ELF += \
 GarageDoor.elf \
@@ -65,26 +65,26 @@ all: GarageDoor
 GarageDoor: $(HEX)
 	@echo 'Building target: $@'
 	@echo 'Printing size:'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-size" -A "D:/git/arduino-garage-door/GarageDoor/Release/GarageDoor.elf"
+	"D:\eclipse_oxygen\eclipse\/arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-size" -A "D:/git/arduino-garage-door/GarageDoor/Release/GarageDoor.elf"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-arduino.ar: $(AR_OBJ)
+D:\git\arduino-garage-door\GarageDoor\Release\arduino.ar: $(AR_OBJ)
 	@echo 'Starting archiver'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-ar" rcs "D:/git/arduino-garage-door/GarageDoor/Release/arduino.ar"  arduino.ar $(AR_OBJ)
+	"D:\eclipse_oxygen\eclipse\/arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-gcc-ar" rcs    D:/git/arduino-garage-door/GarageDoor/Release/arduino.ar $(AR_OBJ)
 	@echo 'Finished building: $@'
 	@echo ' '
 
 GarageDoor.elf: $(LINK_OBJ) $(AR)
 	@echo 'Starting combiner'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -Os -Wl,--gc-sections -mmcu=atmega328p -o "D:/git/arduino-garage-door/GarageDoor/Release/GarageDoor.elf"  $(LINK_OBJ) $(AR)  "-LD:/git/arduino-garage-door/GarageDoor/Release" -lm
+	"D:\eclipse_oxygen\eclipse\/arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/bin/avr-gcc" -Wall -Wextra -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p -o "D:\git\arduino-garage-door\GarageDoor/Release/GarageDoor.elf"   $(LINK_OBJ)   D:/git/arduino-garage-door/GarageDoor/Release/arduino.ar  "-LD:\git\arduino-garage-door\GarageDoor/Release" -lm
 	@echo 'Finished building: $@'
 	@echo ' '
 
 GarageDoor.hex: $(ELF)
 	@echo 'Create eeprom image'
-	${A.RECIPE.OBJCOPY.HEX.PATTERN}
 	${A.RECIPE.OBJCOPY.EEP.PATTERN}
+	${A.RECIPE.OBJCOPY.HEX.PATTERN}
 	@echo 'Finished building: $@'
 	@echo ' '
 
@@ -96,4 +96,4 @@ clean:
 .PHONY: all clean dependents
 .SECONDARY:
 
--include ../makefile.targets
+-include ..\makefile.targets
