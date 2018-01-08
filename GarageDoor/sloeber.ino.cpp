@@ -5,7 +5,6 @@
 //This file has been generated on 2017-12-28 14:24:36
 
 #include "Arduino.h"
-#include "Arduino.h"
 #include "WString.h"
 
 void slowStart(int direction) ;
