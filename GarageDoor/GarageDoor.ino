@@ -285,6 +285,8 @@ void processMessage(String str)
 		Serial.print(maxCurrentUp);
 		Serial.print("\",\"maxCurrentDown\":\"");
 		Serial.print(maxCurrentDown);
+		Serial.print("\",\"doorStateIndicator\":\"");
+		Serial.print(doorStateIndicator);
 		Serial.println("\"}}");
 	}
 }
