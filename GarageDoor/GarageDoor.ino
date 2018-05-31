@@ -17,8 +17,8 @@ const int currentSensorPin = A0;		//analog input pin for current sensor
 
 //constants
 const int DOOR_CLOSED = 0;
-const int DOOR_OPEN = 2;
 const int DOOR_IN_BETWEEN = 1;
+const int DOOR_OPEN = 2;
 const int POWER_SUPPLY_ON = 1;
 const int POWER_SUPPLY_OFF = 0;
 const int OPENING_DIRECTION = 1;
@@ -276,7 +276,7 @@ void processMessage(String str)
 			maxCurrentDown = val;
 		}
 	}else if(command == "g"){
-		//{"ard_settings":{"speedUp":"144","speedDown":"200","maxCurrentUp":"512","maxCurrentDown":"758"}}
+		// {"ard_settings":{"speedUp":"144","speedDown":"200","maxCurrentUp":"512","maxCurrentDown":"758","doorStateIndicator":"1"}}
 		Serial.print("{\"ard_settings\":{\"speedUp\":\"");
 		Serial.print(speedUp);
 		Serial.print("\",\"speedDown\":\"");
