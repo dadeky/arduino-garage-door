@@ -82,7 +82,7 @@ GarageDoor.elf: $(LINK_OBJ) $(AR)
 	@echo ' '
 
 GarageDoor.hex: $(ELF)
-	@echo 'Create eeprom image'
+	@echo 'Do all objcopy commands'
 	${A.RECIPE.OBJCOPY.EEP.PATTERN}
 	${A.RECIPE.OBJCOPY.HEX.PATTERN}
 	@echo 'Finished building: $@'
