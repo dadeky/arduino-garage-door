@@ -32,7 +32,7 @@ int sensorSendInterval = 50;					//how often we send sensor values
 unsigned long inactiveInterval = 3000;			//when this interval is reached the power supplies go off
 int waitForPsInterval = 100;					//how many miliseconds to wait before the Power supply wakes up
 int maxCurrentUp = 900;							//if the current is larger than this than the door stops
-int maxCurrentDown = 600;						//if the current is larger than this than the door stops
+int maxCurrentDown = 650;						//if the current is larger than this than the door stops
 int slowStartDuration = 500;					//the duration of the slow start in miliseconds
 int slowStartNumOfSteps = 20;					//number of steps to reach the full speed
 
